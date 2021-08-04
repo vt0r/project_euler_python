@@ -27,20 +27,20 @@ sum = 0
 
 # Determine whether a given value is a multiple of given factor(s)
 def is_multiple(number: int, factors: list) -> bool:
-  for factor in factors:
-    if number % factor == 0:
-      return True
-      break
-  return False
+    for factor in factors:
+        if number % factor == 0:
+          return True
+          break
+    return False
 
 # Check to see if numbers in a given range are even multiples of given factors
 for number in range(1, max_val):
-  if is_multiple(number, factors):
-    multiples.append(number)
+    if is_multiple(number, factors):
+        multiples.append(number)
 
 # Sum all array elements
 for m in range(0, len(multiples)):
-  sum = sum + multiples[m]
+    sum = sum + multiples[m]
 
 # Print all elements and then the sum
 print(f"Multiples: {multiples}\n\nSum: {sum}")
